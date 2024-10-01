@@ -39,7 +39,8 @@ public class Main {
             System.out.println("Основное меню");
             System.out.println("1: проверить баланс счета");
             System.out.println("2: снять со счета");
-            System.out.println("3: выйти");
+            System.out.println("3: положить на счет");
+            System.out.println("4: выйти");
             System.out.print("Введите пункт меню: "); numOfPunkt = in.nextInt();
 
 
@@ -57,6 +58,15 @@ public class Main {
                 mass[id].withdraw(money);
             }
             else if(numOfPunkt == 3)
+            {
+                double money;
+
+                System.out.print("Введите сумму для пополнения: ");
+                money = in.nextDouble();
+
+                mass[id].deposit(money);
+            }
+            else if(numOfPunkt == 4)
             {
                 break;
             }
